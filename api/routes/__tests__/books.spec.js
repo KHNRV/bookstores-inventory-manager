@@ -8,9 +8,13 @@ const username = process.env.DB_USER;
 const token = generateAccessToken(username);
 
 beforeEach(async () => {
-  await db.migrate.rollback();
-  await db.migrate.latest();
-  await db.seed.run();
+  try {
+    await db.migrate.rollback();
+    await db.migrate.latest();
+    await db.seed.run();
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 describe("Books", () => {
@@ -54,7 +58,7 @@ describe("Books", () => {
       .expect("Content-Type", /json/)
       .expect(200);
 
-    expect(res.body).toEqual([{ id: 5 }]);
+    expect(res.body).toEqual([5]);
     done();
   });
 
