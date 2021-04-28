@@ -3,7 +3,11 @@ exports.up = function (knex) {
     table.increments().primary();
     table.string("title").notNullable();
     table.string("isbn_13").unique();
-    table.integer("author_id").notNullable().references("authors.id");
+    table
+      .integer("author_id")
+      .notNullable()
+      .references("authors.id")
+      .onDelete("CASCADE");
   });
 };
 
