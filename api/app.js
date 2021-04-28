@@ -5,9 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const auth = require("./helpers/authentication");
 const db = require("./helpers/db/index");
-const WebSocketServer = require("ws").Server;
-const wss = new WebSocketServer({ port: process.env.WS_PORT + 1 || 3002 });
-const inventoryWatcher = require("./helpers/inventoryWatcher")(db, wss);
+const inventoryWatcher = require("./helpers/inventoryWatcher")(db);
 
 const indexRouter = require("./routes/index");
 const apiRouter = require("./routes/api");

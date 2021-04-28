@@ -23,7 +23,7 @@ function getDeletedItems(prev, curr) {
   return deletedInventories.map((inventory) => ({ ...inventory, stock: 0 }));
 }
 
-module.exports = async (db, wss) => {
+module.exports = async (db) => {
   const { rows } = await db.inventories.index();
   let prevInventory = rows;
 
@@ -37,9 +37,7 @@ module.exports = async (db, wss) => {
       updatesToSend.push(...getDeletedItems(prevInventory, currInventory));
       prevInventory = currInventory;
       if (updatesToSend.length) {
-        wss.broadcast = function () {
-          wss.clients.forEach((client) => client.send(updatesToSend));
-        };
+        console.log(updatesToSend);
       }
     } catch (error) {
       console.log(error);
