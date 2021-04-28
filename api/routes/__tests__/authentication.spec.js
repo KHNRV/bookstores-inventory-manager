@@ -20,12 +20,4 @@ describe("Authentication", () => {
       .expect("Content-Type", "text/html; charset=utf-8")
       .expect(200, done);
   });
-  xit("GET    >> / - with invalid jwt", async (done) => {
-    const res = await request
-      .get("/")
-      .set("Authorization", `${username} ${token}`);
-    expect(0).toEqual(0);
-
-    done();
-  });
 });
