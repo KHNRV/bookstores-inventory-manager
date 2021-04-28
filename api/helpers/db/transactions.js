@@ -3,7 +3,10 @@ module.exports = (knex) => ({
     return knex.select().from("transactions");
   },
 
-  create() {},
+  create(newTransaction) {
+    return knex.insert(newTransaction, ["id"]).into("transactions");
+  },
+
   read() {},
   update() {},
   destroy() {},
