@@ -21,7 +21,16 @@ module.exports = (db, { authenticateToken }) => {
     res.send(response);
   });
   books.put("/:id", authenticateToken, async (req, res, next) => {});
-  books.delete("/:id", authenticateToken, async (req, res, next) => {});
+  books.delete("/:isbn_13", authenticateToken, async (req, res, next) => {
+    try {
+      const isbn_13 = req.params.isbn_13;
+      const response = await db.books.destroy(isbn_13);
+      res.send(response);
+    } catch (error) {
+      console.log(error);
+      res.status(403).send(error);
+    }
+  });
 
   return books;
 };
