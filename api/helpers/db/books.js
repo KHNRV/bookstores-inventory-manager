@@ -7,11 +7,6 @@ module.exports = (knex) => ({
     const newBookId = await knex("books").insert(newBook, "id");
     const stores = await knex.select().from("stores");
     stores.forEach(async (store) => {
-      console.log({
-        book_id: newBookId[0],
-        store_id: store.id,
-        change: 0,
-      });
       await knex
         .insert({
           book_id: newBookId[0],

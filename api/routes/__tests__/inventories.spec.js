@@ -8,9 +8,13 @@ const username = process.env.DB_USER;
 const token = generateAccessToken(username);
 
 beforeEach(async () => {
-  await db.migrate.rollback();
-  await db.migrate.latest();
-  await db.seed.run();
+  try {
+    await db.migrate.rollback();
+    await db.migrate.latest();
+    await db.seed.run();
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 describe("Transaction", () => {
