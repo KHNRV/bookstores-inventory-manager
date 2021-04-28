@@ -15,7 +15,6 @@ beforeEach(async () => {
 
 describe("Books", () => {
   it("GET    >> /api/books", async (done) => {
-    // Sends GET Request to /test endpoint
     const expectedResults = [
       {
         author_id: 1,
@@ -72,10 +71,6 @@ describe("Books", () => {
       .set("Authorization", `${username} ${token}`);
     // ...
     expect(res.body).toEqual(expectedResults);
-    done();
-  });
-
-  xit("PUT    >> /api/books/:id", async (done) => {
     done();
   });
 

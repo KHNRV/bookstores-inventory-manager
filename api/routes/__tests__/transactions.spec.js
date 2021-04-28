@@ -136,28 +136,4 @@ describe("Transaction", () => {
     });
     done();
   });
-
-  // xit("GET    >> /api/books/:isbn_13", async (done) => {
-  //   const expectedResults = {
-  //     author_id: 1,
-  //     id: 1,
-  //     isbn_13: "9780446675536",
-  //     title: "Gone with the Wind",
-  //   };
-
-  //   const res = await request
-  //     .get(`/api/books/${expectedResults.isbn_13}`)
-  //     .set("Authorization", `${username} ${token}`);
-  //   // ...
-  //   expect(res.body).toEqual(expectedResults);
-  //   done();
-  // });
-
-  // xit("PUT    >> /api/books/:id", async (done) => {
-  //   done();
-  // });
-
-  // xit("DELETE >> /api/books/:id", async (done) => {
-  //   done();
-  // });
 });
