@@ -7,7 +7,7 @@ const db = require("../../data/db");
 const username = process.env.DB_USER;
 const token = generateAccessToken(username);
 
-beforeAll(async () => {
+beforeEach(async () => {
   await db.migrate.rollback();
   await db.migrate.latest();
   await db.seed.run();
@@ -79,7 +79,12 @@ describe("Books", () => {
     done();
   });
 
-  xit("DELETE >> /api/books/:id", async (done) => {
+  it("DELETE >> /api/books/:id", async (done) => {
+    const res = await request
+      .delete(`/api/books/9780446675536`)
+      .set("Authorization", `${username} ${token}`)
+      .expect("Content-Type", /json/)
+      .expect(200);
     done();
   });
 });
