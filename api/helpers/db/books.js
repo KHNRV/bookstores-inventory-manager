@@ -3,8 +3,24 @@ module.exports = (knex) => ({
     return knex.select().from("books");
   },
 
-  create(newBook) {
-    return knex("books").insert(newBook, ["id"]);
+  async create(newBook) {
+    const newBookId = await knex("books").insert(newBook, "id");
+    const stores = await knex.select().from("stores");
+    stores.forEach(async (store) => {
+      console.log({
+        book_id: newBookId[0],
+        store_id: store.id,
+        change: 0,
+      });
+      await knex
+        .insert({
+          book_id: newBookId[0],
+          store_id: store.id,
+          change: 0,
+        })
+        .into("transactions");
+    });
+    return newBookId;
   },
   read() {
     return {
@@ -17,7 +33,7 @@ module.exports = (knex) => ({
   },
   update() {},
   destroy(isbn_13) {
-    return knex("books").where("isbn_13", isbn_13).del(["id"]);
+    return knex("books").where("isbn_13", isbn_13).del("id");
   },
   get: {
     id: {
