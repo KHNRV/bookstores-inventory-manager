@@ -1,5 +1,7 @@
 module.exports = (knex) => ({
-  index() {},
+  index() {
+    knex.select().from("stores");
+  },
 
   create() {},
   read() {},
