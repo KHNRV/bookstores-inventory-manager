@@ -3,7 +3,9 @@ module.exports = (knex) => ({
     return knex.select().from("books");
   },
 
-  create() {},
+  create(newBook) {
+    return knex("books").insert(newBook, ["id"]);
+  },
   read() {
     return {
       where: {
