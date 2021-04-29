@@ -1,39 +1,50 @@
 ## SESSION
 
-POST   >> /session
+| METHOD | ENDPOINT | STATUS |
+| ------ | -------- | ------ |
+| **POST**   | /session | TODO   |
 
 ## API > BOOKS
 
-GET    >> /api/books
-
-POST   >> /api/books
-GET    >> /api/books/:id
-PUT    >> /api/books/:id
-DELETE >> /api/books/:id
+| METHOD     | ENDPOINT       | STATUS   |
+| ---------- | -------------- | -------- |
+| **GET**    | /api/books     | **DONE** |
+| **POST**   | /api/books     | **DONE** |
+| **GET**    | /api/books/:id | **DONE** |
+| **PUT**    | /api/books/:id | TODO     |
+| **DELETE** | /api/books/:id | **DONE** |
 
 ## API > AUTHORS
 
-GET    >> /api/authors
-
-POST   >> /api/authors
-GET    >> /api/authors/:id
-PUT    >> /api/authors/:id
-DELETE >> /api/authors/:id
-
+| METHOD     | ENDPOINT         | STATUS |
+| ---------- | ---------------- | ------ |
+| **GET**    | /api/authors     | TODO   |
+| **POST**   | /api/authors     | TODO   |
+| **GET**    | /api/authors/:id | TODO   |
+| **PUT**    | /api/authors/:id | TODO   |
+| **DELETE** | /api/authors/:id | TODO   |
 ## API > STORES
 
-GET    >> /api/stores
-
-POST   >> /api/stores
-GET    >> /api/stores/:id
-PUT    >> /api/stores/:id
-DELETE >> /api/stores/:id
-
+| METHOD     | ENDPOINT        | STATUS   |
+| ---------- | --------------- | -------- |
+| **GET**    | /api/stores     | **DONE** |
+| **POST**   | /api/stores     | TODO     |
+| **GET**    | /api/stores/:id | TODO     |
+| **PUT**    | /api/stores/:id | TODO     |
+| **DELETE** | /api/stores/:id | TODO     |
 ## API > TRANSACTIONS
 
-GET    >> /api/transactions
+| METHOD     | ENDPOINT              | STATUS   |
+| ---------- | --------------------- | -------- |
+| **GET**    | /api/transactions     | **DONE** |
+| **POST**   | /api/transactions     | **DONE** |
+| **GET**    | /api/transactions/:id | TODO     |
+| **PUT**    | /api/transactions/:id | TODO     |
+| **DELETE** | /api/transactions/:id | TODO     |
+## API > INVENTORIES
 
-POST   >> /api/transactions
-GET    >> /api/transactions/:id
-PUT    >> /api/transactions/:id
-DELETE >> /api/transactions/:id
+| METHOD  | ENDPOINT             | STATUS   |
+| ------- | -------------------- | -------- |
+| **GET** | /api/inventories     | **DONE** |
+| **GET** | /api/inventories/:id | **DONE** |
+
