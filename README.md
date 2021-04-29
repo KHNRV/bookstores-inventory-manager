@@ -9,6 +9,13 @@
 
 > MultiLib is a bookstores inventory manager built on NodeJS, ExpressJS, Knex and PostrgreSQL. Tested with Jest.
 
+## Documentation
+
+- **[Standard Data Formatting](./docs/DATA_STANDARD.md)**
+- **[Routing](./docs/ROUTES.md)**
+- **[Entity Relationship Diagram](./docs/ERD.pdf)**
+- **[Project Journal](./docs/JOURNAL.md)**
+
 ## Install
 
 1. Clone this repository, `cd` into the `/api` folder and execute the following install command
