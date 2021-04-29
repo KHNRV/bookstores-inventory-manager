@@ -38,8 +38,8 @@
 ```js
 {
   id: 1,
-  book_id: 2
-  store_id: 3
+  book_id: 2,
+  store_id: 3,
   change: 5
 }
 ```
@@ -49,8 +49,8 @@
 ```js
 {
   id: 1,
-  book_id: 2
-  store_id: 3
+  book_id: 2,
+  store_id: 3,
   change: -6
 }
 ```
