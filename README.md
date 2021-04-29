@@ -1,11 +1,13 @@
-<h1 align="center">Welcome to bookstores-inventory-manager 👋</h1>
+<h1 align="center">📚 MultiLib 📚</h1>
+<h2 align="center"> Bookstores Inventory Manager</h2>
 <p>
   <a href="./docs" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
 </p>
 
-> Dummy bookstores inventory manager built on NodeJS, ExpressJS, Knex and PostrgreSQL. Tested with Jest.
+
+> MultiLib is a bookstores inventory manager built on NodeJS, ExpressJS, Knex and PostrgreSQL. Tested with Jest.
 
 ## Install
 
@@ -61,5 +63,3 @@ npm test
 * Website: https://kevinnicolas.com
 * Github: [@KHNRV](https://github.com/KHNRV)
 * LinkedIn: [@kevinnicolasr](https://linkedin.com/in/kevinnicolasr)
-
-
