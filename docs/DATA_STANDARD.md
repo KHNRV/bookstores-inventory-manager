@@ -54,3 +54,14 @@
   change: -6
 }
 ```
+
+## Inventory
+
+```js
+{
+  id: 4,
+  book_id: 2,
+  store_id: 3,
+  stock: 2
+}
+```
