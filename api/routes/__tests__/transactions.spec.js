@@ -18,7 +18,7 @@ beforeEach(async () => {
 });
 
 describe("Transaction", () => {
-  it("GET    >> /api/transactions", async (done) => {
+  it("checks if GET of /api/transactions returns the transactions to an authorized user", async (done) => {
     const expectedResults = [
       {
         id: 1,
